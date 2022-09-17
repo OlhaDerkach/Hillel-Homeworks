@@ -16,5 +16,5 @@ print("is", first, "more then", second, "? -", result)
 result = (first == second)
 print("is", first, "equal to", second, "? -", result)
 
-result = (first > second)
-print("is", first, "equal to", second, "? -", result)
+result = (first != second)
+print("is", first, "not equal to", second, "? -", result)
