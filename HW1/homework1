@@ -1,0 +1,20 @@
+#Задача: Створіть дві змінні first=10, second=30. Виведіть на екран результат математичної взаємодії
+# (+, -, *, / и тд.) для цих чисел.
+#Задача: Створіть змінну и по черзі запишіть в неї результат порівняння (<, > , ==, !=) чисел з завдання 1.
+# Виведіть на екран результат кожного порівняння.
+
+first = 10
+second = 30
+print(first + second)
+
+result = (first < second)
+print("is", first, "less then", second, "? -", result)
+
+result = (first > second)
+print("is", first, "more then", second, "? -", result)
+
+result = (first == second)
+print("is", first, "equal to", second, "? -", result)
+
+result = (first > second)
+print("is", first, "equal to", second, "? -", result)
