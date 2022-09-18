@@ -5,7 +5,14 @@
 
 first = 10
 second = 30
-print(first + second)
+
+print("10 + 30 =", first + second)
+print("10 - 30 =", first - second)
+print("10 * 30 =", first * second)
+print("10 / 30 =", round((first / second), 2))
+print("10 to the 30th =", first ** second)
+print("10 // 30 =", first // second)
+print("10 % 30 =", first % second)
 
 result = (first < second)
 print("is", first, "less then", second, "? -", result)
