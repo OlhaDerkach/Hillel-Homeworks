@@ -1,0 +1,22 @@
+# 1. Зформуйте строку, яка містить певну інформацію про символ в відомому слові.
+# Наприклад "The [номер символу] symbol in [тут слово] is '[символ з відповідним порядковим номером]'".
+# Слово та номер отримайте за допомогою input() або скористайтеся константою.
+# Наприклад (слово - "Python" а номер символу 3) - "The 3 symbol in "Python" is 't' ".
+#
+# 2. Написати цикл, який буде вимагати від користувача ввести слово, в якому є буква "о"
+# (враховуються як великі так і маленькі). Цикл не повинен завершитися, якщо користувач ввів слово без букви о.
+
+word = "\"Python\""
+number = int(input("Enter a number from 1 to 6: "))
+print("The", number, "symbol in", word, "is \"", word[number], "\"")
+
+print("")
+
+new_word = input("Please input a word that contains the letter \"O\": ")
+new_word = new_word.lower()
+
+while new_word.find("o") == -1:
+    new_word = input("Try again and input correct word: ")
+    new_word = new_word.lower()
+
+print("Good job")
