@@ -7,8 +7,18 @@
 # (враховуються як великі так і маленькі). Цикл не повинен завершитися, якщо користувач ввів слово без букви о.
 
 word = "\"Python\""
-number = int(input("Enter a number from 1 to 6: "))
-print("The", number, "symbol in", word, "is \"", word[number], "\"")
+number = input("Enter a number from 1 to 6: ")
+
+while not number.isdigit():
+    print("Please be careful. You shall input numeric value from 1 to 6")
+    number = input("Enter correct number: ")
+
+int_number = int(number)
+
+if (0 < int_number < 7):
+    print("The", int_number, "symbol in", word, "is \"", word[int_number], "\"")
+else:
+    print("Your input is incorrect")
 
 print("")
 
