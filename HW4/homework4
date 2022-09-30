@@ -1,0 +1,39 @@
+# Є list з даними lst1 = ['1', '2', 3, True, 'False', 5, '6', 7, 8, 'Python', 9, 0, 'Lorem Ipsum'].
+# Напишіть код, який свормує новий list (наприклад lst2), який містить лише змінні типу стрінг,
+# які присутні в lst1. Зауважте, що lst1 не є статичним і може формуватися динамічно.
+
+print("")
+
+lst1 = ['1', '2', 3, True, 'False', 5, '6', 7, 8, 'Python', 9, 0, 'Lorem Ipsum']
+lst2 = [e for e in lst1 if type(e) == str]
+print(lst2)
+
+print("")
+
+# Є list довільних чисел, наприклад [11, 77, 4, 22, 0, 56, 5, 95, 7, 5, 87, 13, 45, 67, 44].
+# Напишіть код, який видалить з нього всі числа, які менше 21 і більше 74.
+
+num_lst1 = [11, 77, 4, 22, 0, 56, 5, 95, 7, 5, 87, 13, 45, 67, 44]
+num_lst2 = []
+
+for i in num_lst1:
+    if 20 < i < 75:
+        num_lst2.append(i)
+print(num_lst2)
+
+print("")
+
+# Є стрінг з певним текстом (можна скористатися input або константою).
+# Напишіть код, який визначить кількість слів в цьому тексті, які закінчуються на 'о'.
+
+hello_str = "Say hello to sudents learning Python!"
+print(hello_str)
+splitted_str = hello_str.split()
+count = 0
+
+for s in splitted_str:
+    if s.endswith("o"):
+        count +=1
+        print(count, "-", s)
+
+print("There are", count, "words that end with \"o\"")
