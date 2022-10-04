@@ -1,0 +1,43 @@
+# Дана довільна строка. Напишіть код, який знайде в ній і віведе на екран кількість слів, які містять дві голосні літери підряд.
+
+my_string = "\"Python\" is the best language ever, Yahoo!"
+my_string = my_string.lower().split()
+
+vowels = set("aeiou")
+count = 0
+
+for word in my_string:
+    letter_count = 0
+
+    for letter in word:
+
+        if letter in vowels:
+            letter_count += 1
+        else:
+            letter_count = 0
+
+        if letter_count == 2:
+            count += 1
+            print(word)
+            break
+print(count)
+
+# Є два довільних числа які відповідають за мінімальну і максимальну ціну. Є Dict з назвами магазинів і цінами:
+# { "cito": 47.999, "BB_studio" 42.999, "momo": 49.999, "main-service": 37.245, "buy.now": 38.324,
+#   "x-store": 37.166, "the_partner": 38.988, "sota": 37.720, "rozetka": 38.003}.
+# Напишіть код, який знайде і виведе на екран назви магазинів, ціни яких попадають в діапазон між
+# мінімальною і максимальною ціною. Наприклад:
+#
+# lower_limit = 35.9
+# upper_limit = 37.339
+# > match: "x-store", "main-service"
+
+min_price = 38.2
+max_price = 44.9
+
+shops_dict = ({"cito": 47.999, "BB_studio": 42.999, "momo": 49.999, "main-service": 37.245, "buy.now": 38.324,
+"x-store": 37.166, "the_partner": 38.988, "sota": 37.720, "rozetka": 38.003})
+
+for key, value in shops_dict.items():
+    if min_price < value < max_price:
+        print(key)
